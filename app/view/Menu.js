@@ -12,8 +12,10 @@ Ext.define('Iinvoice.view.Menu', {
             items: [
                 {
                     xtype: 'button',
+                    action: 'logOut',
+                    ui: 'decline',
                     align: 'right',
-                    text: 'Iinvoice'
+                    text: 'Salir'
                 }
             ]
         },

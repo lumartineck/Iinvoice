@@ -19,6 +19,10 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
+    stores: [
+        'Menu'
+    ],
+
     views: [
         'Main'
     ],

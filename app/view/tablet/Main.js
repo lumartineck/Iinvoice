@@ -3,5 +3,5 @@
  */
 Ext.define('Iinvoice.view.tablet.Main', {
     extend: 'Iinvoice.view.Main',
-    config:{ }
+    config:{}
 });

@@ -20,13 +20,12 @@ Ext.define('Iinvoice.store.Menu',{
             }
         ],
         data: [
-            {name: 'Ordenes de venta',  icon: 'resources/images/cart.png', action: 'venta'},
-            {name: 'Definición de rutas y actividades',   icon: 'resources/images/cart.png', action: 'rutas'},
-            {name: 'Cobranza', icon: 'resources/images/cart.png', action: 'cobranza'},
-            {name: 'Informes', icon: 'resources/images/cart.png', action: 'informes'},
-            {name: 'Información del sistema',   icon: 'resources/images/cart.png', action: 'sistema'},
-            {name: 'Prospectos',   icon: 'resources/images/cart.png', action: 'prospectos'},
-            {name: 'Salir',   icon: 'resources/images/cart.png', action: 'salir'}
+            {name: 'Facturas',  icon: 'resources/images/picture.png', action: 'facturas'},
+            {name: 'Clientes',   icon: 'resources/images/picture.png', action: 'clientes'},
+            {name: 'Gastos', icon: 'resources/images/picture.png', action: 'gastos'},
+            {name: 'Proyectos', icon: 'resources/images/picture.png', action: 'proyectos'},
+            {name: 'Estimados',   icon: 'resources/images/picture.png', action: 'estimados'},
+            {name: 'Reportes',   icon: 'resources/images/picture.png', action: 'reportes'}
         ]
     }
 });
