@@ -5,7 +5,8 @@ Ext.define('Iinvoice.view.Menu', {
     extend: 'Ext.NavigationView',
     xtype: 'menu',
     requires: [
-        'Ext.dataview.DataView'
+        'Ext.dataview.DataView',
+        'Ext.Carousel'
     ],
     config: {
         navigationBar: {
@@ -38,7 +39,8 @@ Ext.define('Iinvoice.view.Menu', {
                     {
                         xtype: 'dataview',
                         scrollable: false,
-                        padding: 20,
+                        height: '100%',
+                        padding: 30,
                         inline: true,
                         cls: 'dataview-inline',
                         store: {
@@ -48,7 +50,12 @@ Ext.define('Iinvoice.view.Menu', {
                             ],
                             data: recordsforpage
                         },
-                        itemTpl: '<div style="width: 65px; height: 100px;"><img src="{icon}"/><br><span style="font-size: 10px;text-align: center;">{name}</span></div>'
+                        itemTpl: '<div style="width: 65px; height: 100px;">' +
+                                    '<div style="text-align: center;">' +
+                                        '<img src="{icon }"/>' +
+                                    '</div>' +
+                                    '<div style="font-size: 10px;text-align: center;">{name}</div>' +
+                                 '</div>'
                     }
                 ]
             };
