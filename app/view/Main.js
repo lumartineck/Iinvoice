@@ -2,8 +2,7 @@ Ext.define('Iinvoice.view.Main', {
     extend: 'Ext.Container',
     xtype:'main',
     requires: [
-        'Iinvoice.view.LoginForm',
-        'Iinvoice.view.Menu'
+        'Iinvoice.view.LoginForm'
     ],
     config: {
         layout: 'card',
@@ -13,15 +12,15 @@ Ext.define('Iinvoice.view.Main', {
 
         items: [{
             xtype: 'loginform'
-        }, {
+        }/*, {
             xtype: 'menu'
-        }]
-    },
+        }*/]
+    }/*,
 
     initialize: function () {
         var me = this;
         if (localStorage.getItem('user')) {
             me.setActiveItem(1);
         }
-    }
+    }*/
 });

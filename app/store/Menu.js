@@ -20,18 +20,18 @@ Ext.define('Iinvoice.store.Menu',{
             }
         ],
         data: [
-            {name: 'Facturas',  icon: 'resources/images/picture.png', action: 'facturas'},
-            {name: 'Clientes',   icon: 'resources/images/picture.png', action: 'clientes'},
-            {name: 'Gastos', icon: 'resources/images/picture.png', action: 'gastos'},
-            {name: 'Proyectos', icon: 'resources/images/picture.png', action: 'proyectos'},
-            {name: 'Estimados',   icon: 'resources/images/picture.png', action: 'estimados'},
-            {name: 'Reportes',   icon: 'resources/images/picture.png', action: 'reportes'},
-            {name: 'Facturas 2',  icon: 'resources/images/picture.png', action: 'facturas2'},
-            {name: 'Clientes 2',   icon: 'resources/images/picture.png', action: 'clientes2'},
-            {name: 'Gastos 2', icon: 'resources/images/picture.png', action: 'gastos2'},
-            {name: 'Proyectos 2', icon: 'resources/images/picture.png', action: 'proyectos2'},
-            {name: 'Estimados 2',   icon: 'resources/images/picture.png', action: 'estimados2'},
-            {name: 'Reportes 2',   icon: 'resources/images/picture.png', action: 'reportes2'}
+            {name: 'Facturas',  icon: 'http://placehold.it/64x64', action: 'facturas'},
+            {name: 'Clientes',   icon: 'http://placehold.it/64x64', action: 'clientes'},
+            {name: 'Gastos', icon: 'http://placehold.it/64x64', action: 'gastos'},
+            {name: 'Proyectos', icon: 'http://placehold.it/64x64', action: 'proyectos'},
+            {name: 'Estimados',   icon: 'http://placehold.it/64x64', action: 'estimados'},
+            {name: 'Reportes',   icon: 'http://placehold.it/64x64', action: 'reportes'},
+            {name: 'Facturas 2',  icon: 'http://placehold.it/64x64', action: 'facturas2'},
+            {name: 'Clientes 2',   icon: 'http://placehold.it/64x64', action: 'clientes2'},
+            {name: 'Gastos 2', icon: 'http://placehold.it/64x64', action: 'gastos2'},
+            {name: 'Proyectos 2', icon: 'http://placehold.it/64x64', action: 'proyectos2'},
+            {name: 'Estimados 2',   icon: 'http://placehold.it/64x64', action: 'estimados2'},
+            {name: 'Reportes 2',   icon: 'http://placehold.it/64x64', action: 'reportes2'}
         ]
     }
 });

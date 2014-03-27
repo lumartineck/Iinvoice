@@ -1,7 +1,7 @@
 /**
  * Created by lumartin on 12/03/14.
  */
-Ext.define('Iinvoice.view.Menu', {
+Ext.define('Iinvoice.view.tablet.Menu', {
     extend: 'Ext.NavigationView',
     xtype: 'menu',
     requires: [
