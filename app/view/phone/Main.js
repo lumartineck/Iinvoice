@@ -10,11 +10,11 @@ Ext.define('Iinvoice.view.phone.Main', {
 
     initialize: function () {
         var me = this;
-        me.add({
-            xtype: 'menu'
-        });
 
         if (localStorage.getItem('user')) {
+            me.add({
+                xtype: 'menu'
+            });
             me.setActiveItem(1);
         }
     }

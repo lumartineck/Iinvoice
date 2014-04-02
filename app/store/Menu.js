@@ -20,12 +20,12 @@ Ext.define('Iinvoice.store.Menu',{
             }
         ],
         data: [
-            {name: 'Facturas',  icon: 'http://placehold.it/64x64', action: 'facturas'},
-            {name: 'Clientes',   icon: 'http://placehold.it/64x64', action: 'clientes'},
-            {name: 'Gastos', icon: 'http://placehold.it/64x64', action: 'gastos'},
-            {name: 'Proyectos', icon: 'http://placehold.it/64x64', action: 'proyectos'},
-            {name: 'Estimados',   icon: 'http://placehold.it/64x64', action: 'estimados'},
-            {name: 'Reportes',   icon: 'http://placehold.it/64x64', action: 'reportes'},
+            {name: 'Facturas',  icon: 'http://placehold.it/64x64', action: 'invoices'},
+            {name: 'Clientes',   icon: 'http://placehold.it/64x64', action: 'clients'},
+            {name: 'Gastos', icon: 'http://placehold.it/64x64', action: 'expenses'},
+            {name: 'Proyectos', icon: 'http://placehold.it/64x64', action: 'projects'},
+            {name: 'Estimados',   icon: 'http://placehold.it/64x64', action: 'estimates'},
+            {name: 'Reportes',   icon: 'http://placehold.it/64x64', action: 'reports'},
             {name: 'Facturas 2',  icon: 'http://placehold.it/64x64', action: 'facturas2'},
             {name: 'Clientes 2',   icon: 'http://placehold.it/64x64', action: 'clientes2'},
             {name: 'Gastos 2', icon: 'http://placehold.it/64x64', action: 'gastos2'},

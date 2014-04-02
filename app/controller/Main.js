@@ -34,6 +34,9 @@ Ext.define('Iinvoice.controller.Main', {
             },
             'menu > carousel > container > dataview': {
                 itemtap: 'onMenuItemTap'
+            },
+            'addButton': {
+                tap: 'onAddButtonTap'
             }
         }
     },
@@ -63,12 +66,12 @@ Ext.define('Iinvoice.controller.Main', {
         me.getLogOutButton().hide();
         me.getAddButton().show();
         switch (record.get('action')) {
-            case 'facturas':
+            case 'invoices':
                 me.getMenu().add({
                     xtype:'invoicelist'
                 });
                 break;
-            case 'clientes':
+            case 'clients':
                 me.getMenu().add({
                     xtype:'clientlist'
                 });
@@ -77,9 +80,34 @@ Ext.define('Iinvoice.controller.Main', {
     },
 
     onMenuBackButtonTap: function () {
-        var me = this;
-        me.getLogOutButton().show();
-        me.getAddButton().hide();
+        var me = this,
+            size = me.getMenu().getItems().length;
+        if (size == 3) {
+            me.getLogOutButton().show();
+            me.getAddButton().hide();
+        } else if (size == 4) {
+            me.getAddButton().show();
+        }
+
         me.getMenu().pop();
+    },
+
+    onAddButtonTap: function () {
+        var me = this,
+            active = me.getMenu().getActiveItem();
+
+        switch (active.getAction()) {
+            case 'invoices':
+                me.getMenu().add({
+                    xtype:'invoiceform'
+                });
+                break;
+            case 'clients':
+                me.getMenu().add({
+                    xtype:'clientform'
+                });
+                break;
+        }
+        me.getAddButton().hide();
     }
 });

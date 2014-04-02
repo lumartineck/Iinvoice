@@ -4,9 +4,13 @@
 Ext.define('Iinvoice.view.clients.ClientList', {
     extend: 'Ext.List',
     xtype: 'clientlist',
+    requires: [
+        'Iinvoice.view.clients.ClientForm'
+    ],
 
     config: {
         fullscreen: true,
+        action: 'clients',
         itemTpl: '{title}',
         data: [
             { title: 'Client 1' },

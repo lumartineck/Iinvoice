@@ -4,9 +4,13 @@
 Ext.define('Iinvoice.view.invoices.InvoiceList', {
     extend: 'Ext.List',
     xtype: 'invoicelist',
+    requires: [
+        'Iinvoice.view.invoices.InvoiceForm'
+    ],
 
     config: {
         fullscreen: true,
+        action: 'invoices',
         itemTpl: '{title}',
         data: [
             { title: 'Invoice 1' },
