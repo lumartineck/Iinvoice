@@ -4,15 +4,15 @@
 Ext.define('Iinvoice.view.phone.Main', {
     extend: 'Iinvoice.view.Main',
     requires: [
-        'Iinvoice.view.phone.Menu'
+        'Iinvoice.view.Menu'
     ],
 
-    initialize: function () {console.log('initialize phone main');
+    initialize: function () {
         var me = this;
 
         if (localStorage.getItem('user')) {
             me.add({
-                xtype: 'menuP'
+                xtype: 'menu'
             });
             me.setActiveItem(1);
         }

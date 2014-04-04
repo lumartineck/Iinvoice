@@ -1,9 +1,9 @@
 /**
- * Created by lumartin on 12/03/14.
+ * Created by lumartin on 03/04/14.
  */
-Ext.define('Iinvoice.view.phone.Menu', {
+Ext.define('Iinvoice.view.Menu', {
     extend: 'Ext.NavigationView',
-    xtype: 'menuP',
+    xtype: 'menu',
     requires: [
         'Ext.dataview.DataView',
         'Ext.Carousel',
@@ -31,9 +31,12 @@ Ext.define('Iinvoice.view.phone.Menu', {
         }
     },
 
-    initialize: function () {console.log('initialize phone menu');
+    initialize: function () {
         var me = this,
-            itemsPerPage = 8, // items per page
+            itemsPerPage = Ext.os.is.Phone ? 8 : 11, // items per page
+            divTamanio = Ext.os.is.Phone ? 'width: 85px; height: 120px;' : 'width: 170px; height: 240px;',
+            imgTamanio = Ext.os.is.Phone ? '64px;' : '128px;',
+            fontSize = Ext.os.is.Phone ? '12px;' : '16px;',
             totalpages = Math.ceil(Ext.getStore('Menu').getCount()/itemsPerPage),
             carouselpages = [], startrecord, endrecord, recordsforpage, carouselpage;
 
@@ -62,12 +65,12 @@ Ext.define('Iinvoice.view.phone.Menu', {
                             ],
                             data: recordsforpage
                         },
-                        itemTpl: '<div style="width: 85px; height: 120px;">' +
-                                    '<div style="text-align: center;">' +
-                                        '<img width="64px;" height="64px;" src="{icon}"/>' +
-                                    '</div>' +
-                                    '<div style="font-size: 12px;text-align: center;">{name}</div>' +
-                                 '</div>'
+                        itemTpl: '<div style="' + divTamanio + '">' +
+                            '<div style="text-align: center;">' +
+                            '<img width="' + imgTamanio + '" height="' + imgTamanio + '" src="{icon}"/>' +
+                            '</div>' +
+                            '<div style="font-size:' + fontSize + 'text-align: center;">{name}</div>' +
+                            '</div>'
                     }
                 ]
             };

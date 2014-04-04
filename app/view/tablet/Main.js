@@ -4,17 +4,16 @@
 Ext.define('Iinvoice.view.tablet.Main', {
     extend: 'Iinvoice.view.Main',
     requires: [
-        'Iinvoice.view.tablet.Menu'
+        'Iinvoice.view.Menu'
     ],
 
-    initialize: function () {console.log('initialize tablet main');
+    initialize: function () {
         var me = this;
 
         if (localStorage.getItem('user')) {
             me.add({
-                xtype: 'menuT'
+                xtype: 'menu'
             });
-            console.log(me);
             me.setActiveItem(1);
         }
     }
