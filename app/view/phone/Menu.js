@@ -3,7 +3,7 @@
  */
 Ext.define('Iinvoice.view.phone.Menu', {
     extend: 'Ext.NavigationView',
-    xtype: 'menu',
+    xtype: 'menuP',
     requires: [
         'Ext.dataview.DataView',
         'Ext.Carousel',
@@ -31,7 +31,7 @@ Ext.define('Iinvoice.view.phone.Menu', {
         }
     },
 
-    initialize: function () {
+    initialize: function () {console.log('initialize phone menu');
         var me = this,
             itemsPerPage = 8, // items per page
             totalpages = Math.ceil(Ext.getStore('Menu').getCount()/itemsPerPage),
@@ -50,6 +50,9 @@ Ext.define('Iinvoice.view.phone.Menu', {
                         scrollable: false,
                         height: '100%',
                         padding: 30,
+                        style: {
+                            background: '#D8D8D8'
+                        },
                         inline: true,
                         store: {
                             fields: [
@@ -61,7 +64,7 @@ Ext.define('Iinvoice.view.phone.Menu', {
                         },
                         itemTpl: '<div style="width: 85px; height: 120px;">' +
                                     '<div style="text-align: center;">' +
-                                        '<img src="{icon}"/>' +
+                                        '<img width="64px;" height="64px;" src="{icon}"/>' +
                                     '</div>' +
                                     '<div style="font-size: 12px;text-align: center;">{name}</div>' +
                                  '</div>'

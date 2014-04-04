@@ -10,7 +10,7 @@ Ext.define('Iinvoice.profile.Tablet', {
         views: ['Main']
     },
     isActive: function(){
-        return Ext.os.is.Tablet;
+        return !Ext.os.is.Phone;
     },
     launch: function(){
         Ext.create('Iinvoice.view.tablet.Main');

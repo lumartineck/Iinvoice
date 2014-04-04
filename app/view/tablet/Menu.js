@@ -3,28 +3,37 @@
  */
 Ext.define('Iinvoice.view.tablet.Menu', {
     extend: 'Ext.NavigationView',
-    xtype: 'menu',
+    xtype: 'menuT',
     requires: [
         'Ext.dataview.DataView',
-        'Ext.Carousel'
+        'Ext.Carousel',
+
+        'Iinvoice.view.invoices.InvoiceList',
+        'Iinvoice.view.clients.ClientList'
     ],
     config: {
         navigationBar: {
-            items: [
-                {
-                    xtype: 'button',
-                    action: 'logOut',
-                    ui: 'decline',
-                    align: 'right',
-                    text: 'Salir'
-                }
-            ]
+            itemId: 'navigationBar',
+            items: [{
+                xtype: 'button',
+                action: 'logOut',
+                ui: 'decline',
+                align: 'right',
+                text: 'Salir'
+            }, {
+                xtype: 'button',
+                hidden:true,
+                action: 'add',
+                ui: 'confirm',
+                align: 'right',
+                text: '+'
+            }]
         }
     },
 
-    initialize: function () {
+    initialize: function () {console.log('initialize tablet menu');
         var me = this,
-            itemsPerPage = 8, // items per page
+            itemsPerPage = 10, // items per page
             totalpages = Math.ceil(Ext.getStore('Menu').getCount()/itemsPerPage),
             carouselpages = [], startrecord, endrecord, recordsforpage, carouselpage;
 
@@ -41,20 +50,23 @@ Ext.define('Iinvoice.view.tablet.Menu', {
                         scrollable: false,
                         height: '100%',
                         padding: 30,
+                        style: {
+                            background: '#D8D8D8'
+                        },
                         inline: true,
-                        cls: 'dataview-inline',
                         store: {
                             fields: [
                                 {name: 'name', type: 'string'},
-                                {name: 'icon',  type: 'string'}
+                                {name: 'icon',  type: 'string'},
+                                {name: 'action',  type: 'string'}
                             ],
                             data: recordsforpage
                         },
-                        itemTpl: '<div style="width: 65px; height: 100px;">' +
+                        itemTpl: '<div style="width: 170px; height: 240px;">' +
                                     '<div style="text-align: center;">' +
-                                        '<img src="{icon }"/>' +
+                                        '<img width="128px;;" height="128px;"src="{icon }"/>' +
                                     '</div>' +
-                                    '<div style="font-size: 10px;text-align: center;">{name}</div>' +
+                                    '<div style="font-size: 16px;text-align: center;">{name}</div>' +
                                  '</div>'
                     }
                 ]
