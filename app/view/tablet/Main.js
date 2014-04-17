@@ -5,9 +5,9 @@ Ext.define('Iinvoice.view.tablet.Main', {
     extend: 'Iinvoice.view.Main',
     requires: [
         'Iinvoice.view.Menu'
-    ],
+    ]/*,
 
-    initialize: function () {
+    initialize: function () {console.log('tablet');
         var me = this;
 
         if (localStorage.getItem('user')) {
@@ -16,5 +16,5 @@ Ext.define('Iinvoice.view.tablet.Main', {
             });
             me.setActiveItem(1);
         }
-    }
+    }*/
 });

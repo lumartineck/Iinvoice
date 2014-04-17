@@ -5,7 +5,7 @@ Ext.define('Iinvoice.view.phone.Main', {
     extend: 'Iinvoice.view.Main',
     requires: [
         'Iinvoice.view.Menu'
-    ],
+    ]/*,
 
     initialize: function () {
         var me = this;
@@ -16,5 +16,5 @@ Ext.define('Iinvoice.view.phone.Main', {
             });
             me.setActiveItem(1);
         }
-    }
+    }*/
 });

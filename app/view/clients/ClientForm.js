@@ -6,17 +6,28 @@ Ext.define('Iinvoice.view.clients.ClientForm', {
     xtype: 'clientform',
 
     config: {
-        fullscreen: true,
-        items: [
-            {
-                xtype: 'textfield',
-                name: 'name',
-                label: 'Nombre Cliente'
-            }, {
-                xtype: 'textfield',
-                name: 'description',
-                label: 'Dirección'
-            }
-        ]
+        items: [{
+            xtype: 'titlebar', //Use in Tablet mode
+            title: 'Add Invoicessss',
+            docked: 'top',
+            //ui: 'neutral',
+            items: [{
+                text: 'cancel',
+                ui:'decline',
+                align: 'left'
+            },{
+                text: 'save',
+                ui: 'confirm',
+                align: 'right'
+            }]
+        }, {//Fields
+            xtype: 'textfield',
+            name: 'name',
+            label: 'Nombre Cliente'
+        }, {
+            xtype: 'textfield',
+            name: 'description',
+            label: 'Dirección'
+        }]
     }
 });

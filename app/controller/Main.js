@@ -93,22 +93,5 @@ Ext.define('Iinvoice.controller.Main', {
         me.getMenu().pop();
     },
 
-    onAddButtonTap: function () {
-        var me = this,
-            active = me.getMenu().getActiveItem();
-
-        switch (active.getAction()) {
-            case 'invoices':
-                me.getMenu().add({
-                    xtype:'invoiceform'
-                });
-                break;
-            case 'clients':
-                me.getMenu().add({
-                    xtype:'clientform'
-                });
-                break;
-        }
-        me.getAddButton().hide();
-    }
+    onAddButtonTap: Ext.emptyFn
 });
