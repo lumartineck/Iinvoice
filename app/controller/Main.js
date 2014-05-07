@@ -37,6 +37,12 @@ Ext.define('Iinvoice.controller.Main', {
             },
             'menu > carousel > container > dataview': {
                 itemtap: 'onMenuItemTap'
+            },
+            'button[action=cancel]': {
+                tap: 'onCancelButtonTap'
+            },
+            'button[action=save]': {
+                tap: 'onSaveButtonTap'
             }
         }
     },
@@ -93,5 +99,9 @@ Ext.define('Iinvoice.controller.Main', {
         me.getMenu().pop();
     },
 
-    onAddButtonTap: Ext.emptyFn
+    onAddButtonTap: Ext.emptyFn,
+
+    onCancelButtonTap: Ext.emptyFn,
+
+    onSaveButtonTap: Ext.emptyFn
 });

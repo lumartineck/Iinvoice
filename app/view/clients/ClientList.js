@@ -9,14 +9,11 @@ Ext.define('Iinvoice.view.clients.ClientList', {
     ],
 
     config: {
+        title: 'Clients',
         fullscreen: true,
         action: 'clients',
-        itemTpl: '{title}',
-        data: [
-            { title: 'Client 1' },
-            { title: 'Client 2' },
-            { title: 'Client 3' },
-            { title: 'Client 4' }
-        ]
+        emptyText: 'There is no clients on this view',
+        itemTpl: '{name} {description}',
+        store: 'Clients'
     }
 });

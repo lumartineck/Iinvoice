@@ -8,15 +8,18 @@ Ext.define('Iinvoice.view.clients.ClientForm', {
     config: {
         items: [{
             xtype: 'titlebar', //Use in Tablet mode
-            title: 'Add Invoicessss',
+            title: 'Add Client',
             docked: 'top',
+            hidden: Ext.os.is.Phone ? true : false,
             //ui: 'neutral',
             items: [{
                 text: 'cancel',
+                action: 'cancel',
                 ui:'decline',
                 align: 'left'
             },{
                 text: 'save',
+                action: 'save',
                 ui: 'confirm',
                 align: 'right'
             }]

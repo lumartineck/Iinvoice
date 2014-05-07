@@ -9,14 +9,10 @@ Ext.define('Iinvoice.view.invoices.InvoiceList', {
     ],
 
     config: {
+        title: 'Invices',
         fullscreen: true,
         action: 'invoices',
-        itemTpl: '{title}',
-        data: [
-            { title: 'Invoice 1' },
-            { title: 'Invoice 2' },
-            { title: 'Invoice 3' },
-            { title: 'Invoice 4' }
-        ]
+        itemTpl: '{name} {description}',
+        store: 'Invoices'
     }
 });
